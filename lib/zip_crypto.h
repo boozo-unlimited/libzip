@@ -47,6 +47,8 @@
 #include "zip_crypto_openssl.h"
 #elif defined(HAVE_MBEDTLS)
 #include "zip_crypto_mbedtls.h"
+#elif defined(HAVE_XCUBECRYPTO)
+#include "zip_crypto_xcubecrypto.h"
 #else
 #error "no crypto backend found"
 #endif
