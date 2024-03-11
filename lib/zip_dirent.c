@@ -1122,7 +1122,6 @@ _zip_get_dirent(zip_t *za, zip_uint64_t idx, zip_flags_t flags, zip_error_t *err
 void
 _zip_u2d_time(time_t intime, zip_uint16_t *dtime, zip_uint16_t *ddate) {
     struct tm *tpm;
-    struct tm tm;
     tpm = zip_localtime(&intime, &tm);
     if (tpm == NULL) {
         /* if localtime fails, return an arbitrary date (1980-01-01 00:00:00) */
